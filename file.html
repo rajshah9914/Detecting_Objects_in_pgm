@@ -1,0 +1,27 @@
+<html>
+    <!-- <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//jquerycsvtotable.googlecode.com/files/jquery.csvToTable.js"></script>
+    </head> -->
+<body>
+        <form >
+            <input type="file" name="pic" accept="image/*">
+            <input type="submit" onclick=Onclick()>
+        </form>
+
+<div id='table-container'></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+<script>
+    function Onclick(){
+        CsvToHtmlTable.init({
+        csv_path: 'data/example.csv',
+        element: 'table-container', 
+        allow_download: true,
+        csv_options: {separator: ';', delimiter: '"'},
+        datatables_options: {"paging": false}
+        });
+    }
+</script>
+</body>
+</html>
